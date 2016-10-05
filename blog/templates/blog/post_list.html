@@ -2,17 +2,19 @@
     <head>
         <title>Django Girls blog</title>
     </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.css" media="screen" title="no title">
     <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+        <div class="ui inverted segement">
+            <h1 class="ui header"><a href="/">Django Girls Blog</a></h1>
         </div>
 
         {% for post in posts %}
-            <div>
+            <div class="ui inverted segment">
                 <p>published: {{ post.published_date }}</p>
                 <h1><a href="">{{ post.title }}</a></h1>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
+            <button type="button" name="button" class="ui red inverted button">Read more</button>
         {% endfor %}
     </body>
 </html>
